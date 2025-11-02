@@ -5,7 +5,7 @@ const roomsRouter = express.Router()
 
 
 roomsRouter
-    .route("/rooms")
+    .route("/")
     .get(getAllRooms)
 
 
