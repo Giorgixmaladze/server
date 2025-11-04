@@ -2,14 +2,10 @@ const Message = require("../model/message.model")
 
 const sendMessages = async (req,res,next) =>{
     try{
-        const {name,email,text} = req.body
+        
 
 
-        const message = await Message.create({
-            name,
-            email,
-            text
-        })
+        const message = await Message.create(req.body)
 
         res.json(message)
     }catch(err){
