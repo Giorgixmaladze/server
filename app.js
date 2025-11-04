@@ -7,7 +7,7 @@ const roomsRouter = require("./router/rooms.router");
 const servicesRouter = require("./router/services.router");
 const messageRouter = require("./router/messages.router");
 const galleryRouter = require("./router/gallery.router");
-
+const bookingRouter = require("./router/booking.router");
 dotenv.config();
 const app = express();
 
@@ -18,7 +18,7 @@ app.use("/services", servicesRouter)
 app.use("/rooms",roomsRouter)
 app.use("/message",messageRouter)
 app.use("/gallery",galleryRouter)
-
+app.use("/booking",bookingRouter)
 mongoose
   .connect(process.env.DATABASE_URL, { dbName: process.env.DB_NAME || 'Hotel' })
   .then(() => {
