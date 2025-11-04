@@ -2,9 +2,9 @@ const mongoose = require("mongoose")
 
 
 const messageSchema = new mongoose.Schema({
-    name:String,
+    username:String,
     email:String,
-    text:String
+    message:String
 })
 
 
